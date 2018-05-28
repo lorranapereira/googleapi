@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8" />
+        <title>Google Maps API v3: Criando rotas</title>
+        <link rel="stylesheet" type="text/css" href="css/estilo.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/estilo.css">    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    </head>
+ 
+    <body>
+    	<div id="site">
+        
+        	<h1>Google Maps API v3: Criando rotas</h1>
+        
+            <form method="post" action="index.html">
+                <fieldset>
+                    <legend>Criar rotas</legend>
+                    <span id="counter">00:00:00</span>
+                    <input type="button" value="Iniciar" onclick="inicia();">                    
+                    <div>
+                        <label for="txtEnderecoPartida">Endereço de partida:</label>
+                        <input type="text" id="txtEnderecoPartida" name="txtEnderecoPartida" />
+                    </div>
+                    
+                    <div>
+                        <label for="txtEnderecoChegada">Endereço de chegada:</label>
+                        <input type="text" id="txtEnderecoChegada" name="txtEnderecoChegada" />
+                    </div>
+                    
+                    <div>
+                        <input type="button" id="btnEnviar" name="btnEnviar" value="Enviar" />
+                        <input type="button" id="inciar" name="btnEnviar" value="Iniciar" />
+                        
+                    </div>
+                </fieldset>
+            </form>
+        
+            <div id="mapa"></div>
+            
+            <div id="trajeto-texto"></div>
+        
+        </div>
+        <div class="container">
+            <div class="table-responsive" style="position:relative; top:30em; width:100%">
+                <table class="table table-striped table-dark">
+                    <thead>
+                    <tr>
+                        <th>Partida</th>
+                        <th>Chegada</th>
+                        <th>Distância</th>
+                        <th>Tempo</th>
+                    </tr>
+                    </thead>
+                    <tbody id = "tbody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <script src="js/jquery.min.js"></script>
+		
+        <!-- Maps API Javascript -->
+        <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCIiTb4YWy7Ot4PBQKNbw2ANMHe5f8SbRE"></script>
+        
+        <!-- Arquivo de inicialização do mapa -->
+		<script src="js/mapa.js"></script>
+    </body>
+</html>
